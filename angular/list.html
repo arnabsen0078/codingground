@@ -58,7 +58,6 @@
       mainApp.controller('listController', function($scope,$http) {
 
           $http.get("http://scampaigns.com/angular/index.php").then( function(response) {
-              console.log(response);
               $scope.lists = response.data.restaurents;
           });
       });
