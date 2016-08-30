@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <title>Restaurent Details</title>
+    <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.8/angular-sanitize.js"></script>
+    <style>
+    .inner-div
+    {
+      border: 1px solid;
+      padding: 10px;
+    }
+    .inner-div > li
+    {
+      list-style: none;
+      padding: 5px;
+    }
+    span.img-sec > img
+    {
+      height: auto;
+      width: 40%;
+    }
+    .outer-div
+    {
+      border: 5px solid;
+      height: auto;
+      width: 50%;
+      padding: 15px;
+    }
+   
+    </style>
+  </head>
+  <body>
+
+    <div class="outer-div" ng-app = "mainApp" ng-controller = "listController">
+      <div class="inner-div"  ng-repeat = "list in lists">
+        <li><h2>{{ list.name }}</h2></li>
+        <li>
+          <span class="img-sec"><img src="{{ list.imagelink }}" alt="" /></span></li>
+        <li><span>{{ list.address }}</span></li>
+        <li>
+          <div class="rating" ng-bind-html="list.rating | filterRating" ></div>
+        </li>
+      </div>
+
+    </div>
+
+    <script>
+        var mainApp = angular.module("mainApp",['ngSanitize']);
+        mainApp.controller('listController', function($scope,$http) {
+            $http.get("http://scampaigns.com/angular/index.php").then( function(response) {
+                $scope.lists = response.data.restaurents;
+            });
+        });
+
+        // Code defining custom module consisting of a filter
+        mainApp.filter( 'filterRating', function() {
+          
+          return function( value ) {
+            var html  =   "";
+            for(var i = 0; i < value; i++)
+            {
+                html  += "<span><img src='http://fooyok.com/static/image/blog/star-rating-full.png' alt='' /></span>";
+            }
+
+            return html;
+
+          }
+        });
+
+    </script>
+  </body>
+</html>
