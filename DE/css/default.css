@@ -1,0 +1,125 @@
+.ui-resizable-helper { border: 1px dotted gray; }
+.helpery {
+  background-color: lime;
+  height: 100%;
+  position: fixed;
+  width: 3px;
+  z-index: 101000;
+}
+.helperx {
+  background-color: lime;
+  height: 3px;
+  position: fixed;
+  width: 100%;
+  z-index: 101000;
+}
+#dragThis {
+    background: #000 none repeat scroll 0 0;
+    border: 1px solid;
+    height: 30px;
+    left: -3px;
+    position: absolute;
+    top: -43px;
+    width: 134px;
+
+}
+#dragThis > span {
+  display: block;
+  float: left;
+  font-size: 14px;
+  line-height: 14px;
+  margin-left: 13px;
+  margin-top: 7px;
+  padding: 0;
+  color:#fff;
+}	
+
+.ui-draggable:focus{
+	cursor:pointer;
+}
+
+  .SFPTWO_EDITFORM li {
+  margin-bottom: 26px;
+}
+
+.jui-checkbox-row {
+  height: auto;
+  overflow: hidden;
+}
+.top-header{
+    width:100%;
+    height:50px;
+    background:#000;
+    margin: 0 auto;
+    text-align: center;
+    position: fixed;
+    z-index: 99999;
+}
+.top-header a{
+    display: block;
+}
+.hoveredclick, .hovered, .textEditModeOn{
+    -webkit-box-shadow:inset 0px 0px 0px 2px #000;
+    -moz-box-shadow:inset 0px 0px 0px 2px #000;
+    box-shadow:inset 0px 0px 0px 2px #000;
+    cursor: pointer;
+}
+.ui-resizable-handle.ui-resizable-n {
+  left: 50%;
+  top: 0;
+}
+.ui-resizable-handle.ui-resizable-e {
+  right: 0;
+  top: 50%;
+}
+.ui-resizable-handle.ui-resizable-s {
+  bottom: 0;
+  left: 50%;
+}
+.ui-resizable-handle.ui-resizable-w {
+  left: 0;
+  top: 50%;
+}
+.ui-resizable-handle.ui-resizable-ne {
+  right: 0;
+  top: 0;
+}
+.ui-resizable-handle.ui-resizable-se.ui-icon.ui-icon-gripsmall-diagonal-se {
+  bottom: 0;
+  right: 0;
+}
+.ui-resizable-handle.ui-resizable-sw {
+  bottom: 0;
+  left: 0;
+}
+.ui-resizable-handle.ui-resizable-nw {
+  left: 0;
+  top: 0;
+}
+.ui-resizable-handle {
+  background-color: #03ddff;
+  border: 2px solid #fff;
+  border-radius: 7px;
+  height: 7px;
+  overflow: visible;
+  width: 7px;
+  z-index: 100105 !important;
+}
+.top-header a {
+  display: inline-block;
+  margin: 13px;
+  position: relative;
+  width: auto;
+}
+.hide-copy-class {
+  display: none;;
+}
+.main_section {
+	background-size: cover;
+}
+button.copy-class {
+  height: 23px;
+} 
+.avpw_is_fullscreen #avpw_controls {
+    z-index: 999999 !important;
+}

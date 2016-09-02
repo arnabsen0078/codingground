@@ -1,0 +1,52 @@
+<html>
+	<head>
+
+		<title>JS Test</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!-- <script src="script.js"></script> -->
+		<script>
+
+			var loadArray	= ['script.js','new.js'];
+			for(var i = 0; i < loadArray.length; i++)
+			{
+				addScript(loadArray[i]);
+			}
+
+			function addScript(marker)
+			{
+				alert(marker);
+				var script = document.createElement('script');
+
+				/*script.onload = function() {
+				  alert("Script loaded and ready");
+				};*/
+
+				script.src = marker;
+				document.getElementsByTagName('head')[0].appendChild(script);
+			}
+			
+
+		</script>
+
+	</head>
+	<body>
+
+		<div class="parent-div">
+			<div class="child-div">
+				<span class="span-1">
+					<p style="display: none;">This will come from first js</p>
+					<button class="button-3">Submit</button>
+				</span>
+				<span class="span-2">
+					<p style="display: none;">This will come from second js</p>
+					<button class="button-3">Submit</button>
+				</span>
+				<span class="span-3">
+					<p style="display: none;">This will come from third js</p>
+					<button class="button-3">Submit</button>
+				</span>
+			</div>
+		</div>
+
+	</body>
+</html>

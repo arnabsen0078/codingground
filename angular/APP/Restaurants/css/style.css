@@ -1,0 +1,23 @@
+    .inner-div
+    {
+      border: 1px solid;
+      padding: 10px;
+    }
+    .inner-div > li
+    {
+      list-style: none;
+      padding: 5px;
+    }
+    span.img-sec > img
+    {
+      height: auto;
+      width: 40%;
+    }
+    .outer-div
+    {
+      border: 5px solid;
+      height: auto;
+      width: 50%;
+      padding: 15px;
+    }
+   

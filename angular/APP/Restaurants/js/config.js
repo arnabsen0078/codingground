@@ -6,7 +6,7 @@ angular.module('test',['test.controller','ngRoute', 'ngSanitize', 'infinite-scro
     /*================ Page routing =====================*/
     .config(function($routeProvider){
         $routeProvider.
-        when('/home', {
+        when('/home/:Id', {
             templateUrl: 'template/home.html',
             controller: 'HomeCtrl'
         }).
