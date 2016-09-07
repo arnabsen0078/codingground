@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="testmodule">
+
+  <head>
+    <script data-require="angular.js@1.1.5" data-semver="1.1.5" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js"></script>
+  </head>
+
+  <body>
+    <div data-ng-controller="StatusController1">
+      <input ng-model="myservice.xxx" />
+    </div>
+    <div data-ng-controller="StatusController2">
+   The value of xxx is: {{ myservice.xxx }}
+    </div>
+  </body>
+
+</html>
