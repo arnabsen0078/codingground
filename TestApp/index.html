@@ -9,10 +9,13 @@
 
   <body>
     <div data-ng-controller="StatusController1">
-      <input ng-model="myservice.xxx" />
+      <input ng-model="myservice.xxx" ng-click="count(1)" />
     </div>
     <div data-ng-controller="StatusController2">
-   The value of xxx is: {{ myservice.xxx }}
+   		<h2>The value of xxx is: {{ myservice.xxx }}</h2>
+    </div>
+	<div data-ng-controller="StatusController3">
+   		<label>Total Count : {{value}}</label>
     </div>
   </body>
 
