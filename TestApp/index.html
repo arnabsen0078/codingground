@@ -8,15 +8,21 @@
   </head>
 
   <body>
-    <div data-ng-controller="StatusController1">
-      <input ng-model="myservice.xxx" ng-click="count(1)" />
+    <!--<div data-ng-controller="StatusController1">
+      <input ng-model="myservice.xxx" />
     </div>
     <div data-ng-controller="StatusController2">
    		<h2>The value of xxx is: {{ myservice.xxx }}</h2>
-    </div>
+    </div>-->
+	
+	  
 	<div data-ng-controller="StatusController3">
-   		<label>Total Count : {{value}}</label>
+      <button ng-click = "count(1)">Click Me!!</button>
     </div>
+    <div data-ng-controller="StatusController4">
+   		<h2>The value of count is: {{ test }}</h2>
+    </div>
+	  
   </body>
 
 </html>

@@ -1,51 +1,27 @@
-<html>
+
+<!DOCTYPE html>
+<html ng-app="formExample">
     <head>
-        <title>POST</title> 
-        <script data-require="angular.js@1.1.5" data-semver="1.1.5" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js"></script>
-        <script>
-            
-            var app = angular.module('angular_post_demo', []);
-            
-            app.controller('sign_up', function ($scope, $http) {
-            /*
-            * This method will be called on click event of button.
-            * Here we will read the email and password value and call our PHP file.
-            */
-            $scope.check_credentials = function () {
+        <title>simple form with AngualrJS</title>
+        <script data-require="angular.js@1.1.5" data-server="1.1.5" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js"></script>
+        <script src="js/form.js"></script>
+    </head> 
 
-            document.getElementById("message").textContent = "";
-
-            var request = $http({
-                method: "post",
-                url: window.location.href + "http://scampaigns.com/angular/login.php",
-                data: {
-                    email: $scope.email,
-                    pass: $scope.password
-                },
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-            });
-
-            /* Check whether the HTTP Request is successful or not. */
-            request.success(function (data) {
-                document.getElementById("message").textContent = "You have login successfully with email "+data;
-            });
-            }
-            });
-        
-        
-        </script>
-        <style></style>
-    </head>
     <body>
-    
-        <div id="container">
-            <div id="login" ng-app='angular_post_demo' ng-controller='sign_up'>
-                <input type="text" size="40" ng-model="email"><br>
-                <input type="password" size="40" ng-model="password"><br>
-                <button ng-click="check_credentials()">Login</button><br>
-                <span id="message"></span>
-            </div>
+
+        <div ng-controller="formCtrl">
+            <form  name="userForm"  class="well form-search"   >
+                
+                <input type="text" ng-model="name" class="input-medium search-query" placeholder="Name" required >
+                <input type="email" ng-model="email" class="input-medium search-query" placeholder="Email" required >
+                <input type="text" ng-model="message" class="input-medium search-query" placeholder="Message" required >
+                <button type="submit" class="btn" ng-click="formsubmit(userForm.$valid)"  ng-disabled="userForm.$invalid">Submit </button>
+		
+            </form>
+            <pre ng-model="result">
+                {{result}}
+            </pre>
         </div>
-    
     </body>
+
 </html>
